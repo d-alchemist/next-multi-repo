@@ -15,7 +15,7 @@ export function middleware(request: NextRequest) {
   } else if (subdomain === 'user') {
     url.pathname = `/user${url.pathname}`;
   } else {
-    url.pathname = `/404`;
+    url.pathname = `/`;
   }
 
   return NextResponse.rewrite(url);
